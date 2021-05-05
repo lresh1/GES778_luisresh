@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Bar Chart Race with Scrubber</title>
-<link rel="stylesheet" type="text/css" href="./inspector.css">
 <body>
 <script type="module">
 
-import define from "./index.js";
-import {Runtime, Library, Inspector} from "./runtime.js";
+// Load the Observable runtime and inspector.
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 
-const runtime = new Runtime();
-const main = runtime.module(define, Inspector.into(document.body));
+// Your notebook, compiled as an ES module.
+import notebook from "https://observablehq.com/@lresh1/bar-chart-race-with-scrubber.js?v=3";
+
+// Load the notebook, observing its cells with a default Inspector
+// that simply renders the value of each cell into the provided DOM node.
+new Runtime().module(notebook, Inspector.into(document.body));
 
 </script>
