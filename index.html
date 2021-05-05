@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<body>
+<div id="observablehq-c51d23fa"></div>
+<p>Credit: <a href="https://observablehq.com/@lresh1/project-getting-started-importing-data">Project - Getting Started (Importing Data) by lresh1</a></p>
+
 <script type="module">
-
-// Load the Observable runtime and inspector.
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-
-// Your notebook, compiled as an ES module.
-import notebook from "https://observablehq.com/@lresh1/bar-chart-race-with-scrubber.js?v=3";
-
-// Load the notebook, observing its cells with a default Inspector
-// that simply renders the value of each cell into the provided DOM node.
-new Runtime().module(notebook, Inspector.into(document.body));
-
+import define from "https://api.observablehq.com/@lresh1/project-getting-started-importing-data.js?v=3";
+new Runtime().module(define, Inspector.into("#observablehq-c51d23fa"));
 </script>
